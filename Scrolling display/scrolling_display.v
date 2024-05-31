@@ -68,74 +68,74 @@ begin
     case(clickcount)
     0:
     begin
-     fourth = 4; //H
-     third = 3; //E
-     second = 7; //L
-     first = 7; //L
+     fourth = 1; 
+     third = 2; 
+     second = 3; 
+     first = 4; 
     end
     
     1:
     begin
-     fourth = 3; //E
-     third = 7; //L
-     second = 7; //L
-     first = 0; //O
+     fourth = 2; 
+     third = 3; 
+     second = 4; 
+     first = 5; 
     end
     
     2:
     begin
-     fourth = 7; //L
-     third = 7; //L
-     second = 0; //O
-     first = 2; //-
+     fourth = 3; 
+     third = 4;
+     second = 5; 
+     first = 6; 
     end
     
     3:
     begin
-     fourth = 7; //L
-     third = 0; //O
-     second = 2; //-
-     first = 1; //T
+     fourth = 4; 
+     third = 5; 
+     second = 6; 
+     first = 1; 
     end
     
     4:
     begin
-     fourth = 0; //O
-     third = 2; //-
-     second = 1; //T
-     first = 4; //H
+     fourth = 5; 
+     third = 6; 
+     second = 1; 
+     first = 2; 
     end
     
     5:
     begin
-     fourth = 2; //-
-     third = 1; //T
-     second = 4; //H
-     first = 3; //E
+     fourth = 6; 
+     third = 1; 
+     second = 2;
+     first = 3; 
     end
     
     6:
     begin
-     fourth = 1; //T
-     third = 4; //H
-     second = 3; //E
-     first = 8; //R
+     fourth = 1; 
+     third = 2; 
+     second = 3; 
+     first = 4; 
     end
     
     7:
     begin
-     fourth = 4; //H
-     third = 3; //E
-     second = 8; //R
-     first = 3; //E
+     fourth = 2;
+     third = 3; 
+     second = 4; 
+     first = 5; 
     end
     
     8:
     begin
-     fourth = 3; //E
-     third = 8; //R
-     second = 3; //E
-     first = 2; //blank
+     fourth = 3; 
+     third = 4; 
+     second = 5; 
+     first = 6; 
     end
   endcase
   
@@ -193,12 +193,12 @@ reg [6:0] sseg_temp;
 always @ (*)
  begin
   case(sseg)
-  4 : sseg_temp = 7'b0001001; //to display H
-   3 : sseg_temp = 7'b0000110; //to display E
-   7 : sseg_temp = 7'b1000111; //to display L
-   0 : sseg_temp = 7'b1000000; //to display O
-   1 : sseg_temp = 7'b0000111; //to display T
-   8 : sseg_temp = 7'b0001000; //to display R
+  1: sseg_temp = 7'b1111000;
+   2 : sseg_temp = 7'b0100100;
+   3 : sseg_temp = 7'b0110000;
+   4 : sseg_temp = 7'b0011001;
+   5: sseg_temp = 7'b0010010;
+   6: sseg_temp = 7'b0000010;
    
    default : sseg_temp = 7'b1111111; //blank
   endcase
